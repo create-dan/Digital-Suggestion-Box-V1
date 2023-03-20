@@ -6,7 +6,7 @@ Flutter Project Created for College Canteen, where students can post some sugges
 
 Phase1 Complete --> Date: 20 MARCH 2023
 
-# Digital Notice Board
+# Track Your Suggestions 
 
 Suggestions and Feedbacks are very crucial for any particular organisation to function well ,
 improve over a period of time and get to know about the say of different members of the
@@ -19,10 +19,14 @@ and ensuring adequate response from the organisation.
 ## Features
 
 - Two seperate sections for students and admins
+- Anonymous submissions of suggestions
 - Authentication with email-verification
 - Post, update, delete the suggestions
 - Seen/ Acknowledge list of suggestions
 - Track the status of suggestions(whether actions have been taken or not)
+- Admin can track total users of app , total active or pending suggestions.
+- Admin can either accept and implement suggestion or discard it.
+- Admin will post the reason for accepting or not accepting the suggestion.
 
 
 ## Tech Stack
@@ -42,7 +46,7 @@ This application is used by students who visit the college canteen.
 https://drive.google.com/file/d/1V42S4E2OmdyKNsNIhLP1krfQZA6VHYSY/view?usp=sharing
 
 
-## Authentication
+## Admin Section
 Login - Register Page  | Email-Authentication Page
 
 <p align="center">
@@ -83,11 +87,12 @@ For Admin and Student
 
 
 
-## Setting/ Profile Screen
+## Admin Section
 
 <p align="center">
-<img src="ScreenShots/Setting.PNG" height="440">
-<img src="ScreenShots/Profile.PNG" height="440">
+<img src="ScreenShots/admin1.jpeg" height="440">
+<img src="ScreenShots/admin2.jpeg" height="440">
+<img src="ScreenShots/admin3.jpeg" height="440">
 </p>
 
 
