@@ -104,3 +104,12 @@ For Admin and Student
 </p>
 
 
+
+## Poster
+
+<p align="center">
+<img src="ScreenShots/poster.png" height="440">
+
+</p>
+
+
