@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "342852600153",
+    "project_id": "digital-suggestion-box-e3ecc",
+    "storage_bucket": "digital-suggestion-box-e3ecc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:342852600153:android:f94ff3bac00d405fe70c48",
+        "android_client_info": {
+          "package_name": "com.example.dss"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "342852600153-gtk822l2jdin3gkr4t57sr5ssh9ks3pt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAk__RNIx4q2x0aIETDccObxoXeud1gaZc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "342852600153-gtk822l2jdin3gkr4t57sr5ssh9ks3pt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
