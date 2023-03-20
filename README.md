@@ -75,7 +75,15 @@ Only students not admin
 ## Suggestion Detail Screen
 For Admin and Student
 <p align="center">
-<img src="ScreenShots/suggestiondetail" height="440">
+<img src="ScreenShots/suggestiondetail.jpeg" height="440">
+
+</p>
+
+
+## Profile Screens
+For Admin and Student
+<p align="center">
+<img src="ScreenShots/profile.jpeg" height="440">
 
 </p>
 
