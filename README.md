@@ -53,7 +53,7 @@ https://drive.google.com/file/d/1RCTSzvuz-_hu6I0RTIIiE-aoUKezhraF/view?usp=shari
 Login - Register Page  | Email-Authentication Page
 
 <p align="center">
-<img src="ScreenShots/img2.jpeg" height="440">
+<img src="ScreenShots/img.jpeg" height="440">
 <img src="ScreenShots/StudentSignup.PNG" height="440">
 </p>
 
