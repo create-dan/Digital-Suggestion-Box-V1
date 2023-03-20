@@ -1,16 +1,10 @@
-# dss
+# Digital Suggestion Box
 
-A new Flutter project.
+Flutter Project Created for College Canteen, where students can post some suggestions regarding the canteen. Admin can take actions on those suggestions and either approved or discard the suggestion. 
 
-## Getting Started
+Tech Stack -
+Flutter 
+Dart
+Firebase
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Phase1 Complete --> Date: 20 MARCH 2023
