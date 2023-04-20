@@ -8,9 +8,7 @@ Phase1 Complete --> Date: 20 MARCH 2023
 
 # Track Your Suggestions 
 
-Suggestions and Feedbacks are very crucial for any particular organisation to function well ,
-improve over a period of time and get to know about the say of different members of the
-body .The current suggestion method such as paper suggestion boxes or email , is very
+The current suggestion method such as paper suggestion boxes or email , is very
 ineffective and not streamlined , as it can be time-consuming, difficult to track, and lacks
 transparency. The task is to create a digital alternative of this system ensuring transparency
 and ensuring adequate response from the organisation.
