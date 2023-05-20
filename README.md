@@ -6,6 +6,16 @@ Flutter Project Created for College Canteen, where students can post some sugges
 
 Phase1 Complete --> Date: 20 MARCH 2023
 
+
+# INSTALLATION GUIDE
+
+ 1) Clone this repo
+ 2) Setup environment for flutter development
+ 3)  Install Android Studio 
+ 4)  Configure all packages mentioned in pubspec.yaml
+ 5)   Create a firebase new project and download google service json file and add your file in local cloned project
+6)  Now you are ready to run the app
+
 # Track Your Suggestions 
 
 The current suggestion method such as paper suggestion boxes or email , is very
