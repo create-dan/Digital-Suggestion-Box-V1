@@ -1,6 +1,5 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:dss/Admin/Dashboard.dart';
 import 'package:dss/models/user_model.dart';
 import 'package:dss/screens/HomeScreen.dart';
@@ -20,17 +19,18 @@ class MyBottom extends StatefulWidget {
 }
 
 class _MyBottomState extends State<MyBottom> {
-  final GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
-
+  final List<String> items = [
+    'Hygiene',
+    'Food',
+    'Unavailability',
+    'Taste',
+  ];
+  String? selectedValue;
   int _index = 1;
   List<Widget> screens = [
     CurrUser.isAdmin! ? RenderAllSuggestions() : AddSuggestionDesc(),
-    // CurrUser.isAdmin! ? Container() : AddSuggestionDesc(),
-
     CurrUser.isAdmin! ? Dashboard() : ProfilePage(),
     // HomeScreen(),
-
-    // ProfilePage(),
   ];
 
   void onItemTap(int index) {
@@ -41,44 +41,49 @@ class _MyBottomState extends State<MyBottom> {
 
   @override
   Widget build(BuildContext context) {
-    Color unSelectedIconColor = Colors.white;
-    Color selectedIconColor = Colors.white;
-    Color backgroundColor = Colors.blue;
-    Color color = Color(0xffff13005A);
+    // Color unSelectedIconColor =  Color(0xff333146);
+    // Color selectedIconColor =Colors.white ;
+    // Color backgroundColor = Colors.white;
+    Color color = Color(0xff05BFDB);
 
     return Scaffold(
       resizeToAvoidBottomInset: false,
       extendBody: true,
-      backgroundColor: backgroundColor,
-      bottomNavigationBar: CurvedNavigationBar(
-        color: color,
-        buttonBackgroundColor: Colors.blue,
-        backgroundColor: Colors.transparent,
-        key: _bottomNavigationKey,
-        index: _index,
-        height: 65,
-        items: [
-          CurrUser.isAdmin!
-              ? Icon(
-                  Icons.dashboard,
-                  size: 32,
-                  color: _index == 0 ? selectedIconColor : unSelectedIconColor,
-                )
-              : Icon(
-                  Icons.add,
-                  color: _index == 1 ? selectedIconColor : unSelectedIconColor,
-                  size: 40,
-                ),
-          Icon(
-            Icons.home,
-            color: _index == 2 ? selectedIconColor : unSelectedIconColor,
-            size: 32,
-          ),
-        ],
-        onTap: (index) => setState(() {
-          onItemTap(index);
-        }),
+      backgroundColor: Colors.white,
+      bottomNavigationBar: ClipRect(
+
+        child: BottomNavigationBar(
+          backgroundColor: color,
+          items: [
+            BottomNavigationBarItem(
+              icon: CurrUser.isAdmin!
+                  ? Icon(
+                Icons.dashboard,
+                size: 32,
+                // color:
+              )
+                  : Icon(
+                Icons.add_circle_outline_outlined,
+                // color:
+                size: 32,
+              ),
+              label: CurrUser.isAdmin! ?"All Suggestion" : "Add Suggestion",
+            ),
+            BottomNavigationBarItem(
+
+              icon: Icon(
+                Icons.home,
+                size: 32,
+              ),
+              label: "Home",
+            ),
+          ],
+          onTap: onItemTap,
+          currentIndex: _index,
+          selectedItemColor: Colors.pink[600],
+        ),
       ),
+
       body: Container(
         height: MediaQuery.of(context).size.height,
         color: Colors.white,

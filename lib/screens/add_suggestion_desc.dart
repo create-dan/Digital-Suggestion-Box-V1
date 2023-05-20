@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:dss/helper/validators.dart';
 import 'package:dss/models/suggestion_model.dart';
 import 'package:dss/models/user_model.dart';
@@ -14,6 +15,16 @@ class AddSuggestionDesc extends StatefulWidget {
 }
 
 class _AddSuggestionDescState extends State<AddSuggestionDesc> {
+  final List<String> items = [
+    'Hygiene',
+    'Food quality',
+    'Unavailability',
+    'Taste',
+    'Costly',
+
+  ];
+  String? selectedValue;
+
   TextEditingController tagController = TextEditingController();
   TextEditingController descriptionController = TextEditingController();
   TextEditingController titleController = TextEditingController();
@@ -23,6 +34,16 @@ class _AddSuggestionDescState extends State<AddSuggestionDesc> {
   String description = '';
   String tag = '';
   List<String> tags = [];
+  //
+  // void _addTag() {
+  //   if (tag.isNotEmpty) {
+  //     setState(() {
+  //       tags.add(tag);
+  //       tag = '';
+  //       tagController.text = '';
+  //     });
+  //   }
+  // }
 
   void _addTag() {
     if (tag.isNotEmpty) {
@@ -32,7 +53,16 @@ class _AddSuggestionDescState extends State<AddSuggestionDesc> {
         tagController.text = '';
       });
     }
+    // if (selectedValue != null && selectedValue!.isNotEmpty) {
+    //   setState(() {
+    //     tags.add(selectedValue!);
+    //     selectedValue = null;
+    //   });
+    // }
   }
+
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +72,7 @@ class _AddSuggestionDescState extends State<AddSuggestionDesc> {
           title: Text(
             'Add Suggestion',
           ),
-          backgroundColor: Color(0xffff13005A),
+          backgroundColor: Color(0xff05BFDB),
           leading: Icon(Icons.data_saver_on_sharp),
         ),
         body: SafeArea(
@@ -132,126 +162,99 @@ class _AddSuggestionDescState extends State<AddSuggestionDesc> {
                           .toList(),
                     ),
                     SizedBox(height: 8),
-                    // Row(
-                    //   crossAxisAlignment: CrossAxisAlignment.end,
-                    //   children: [
-                    //     Expanded(
-                    //       child: TextField(
-                    //         controller: tagController,
-                    //         onChanged: (value) {
-                    //           setState(() {
-                    //             tag = value;
-                    //           });
-                    //         },
-                    //         decoration: InputDecoration(
-                    //           hintText: 'Enter tag',
-                    //         ),
-                    //       ),
-                    //     ),
-                    //     SizedBox(width: 8),
-                    //     ElevatedButton(
-                    //       onPressed: _addTag,
-                    //       child: Text('Add'),
-                    //     ),
-                    //   ],
-                    // ),
-                    // Row(
-                    //   crossAxisAlignment: CrossAxisAlignment.end,
-                    //   children: [
-                    //     Expanded(
-                    //       child: TextField(
-                    //         controller: tagController,
-                    //         onChanged: (value) {
-                    //           setState(() {
-                    //             tag = value;
-                    //           });
-                    //         },
-                    //         decoration: InputDecoration(
-                    //           hintText: 'Enter tag',
-                    //           border: OutlineInputBorder(
-                    //             borderRadius: BorderRadius.circular(10),
-                    //             borderSide: BorderSide(
-                    //               color: Colors.grey.shade300,
-                    //               width: 2,
-                    //             ),
-                    //           ),
-                    //           focusedBorder: OutlineInputBorder(
-                    //             borderRadius: BorderRadius.circular(10),
-                    //             borderSide: BorderSide(
-                    //               color: Colors.blue,
-                    //               width: 2,
-                    //             ),
-                    //           ),
-                    //           filled: true,
-                    //           fillColor: Colors.grey.shade100,
-                    //           contentPadding: EdgeInsets.symmetric(
-                    //               vertical: 10, horizontal: 15),
-                    //         ),
-                    //       ),
-                    //     ),
-                    //     SizedBox(width: 8),
-                    //     ElevatedButton(
-                    //       onPressed: _addTag,
-                    //       style: ButtonStyle(
-                    //         backgroundColor:
-                    //             MaterialStateProperty.all<Color>(Colors.blue),
-                    //         foregroundColor:
-                    //             MaterialStateProperty.all<Color>(Colors.white),
-                    //         shape:
-                    //             MaterialStateProperty.all<RoundedRectangleBorder>(
-                    //           RoundedRectangleBorder(
-                    //             borderRadius: BorderRadius.circular(10),
-                    //           ),
-                    //         ),
-                    //         padding: MaterialStateProperty.all<EdgeInsets>(
-                    //           EdgeInsets.symmetric(vertical: 10, horizontal: 15),
-                    //         ),
-                    //       ),
-                    //       child: Text('Add'),
-                    //     ),
-                    //   ],
-                    // ),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.end,
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Expanded(
-                          child: Container(
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(8),
-                              color: Colors.white,
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.grey.withOpacity(0.5),
-                                  spreadRadius: 2,
-                                  blurRadius: 5,
-                                  offset: Offset(0, 3),
+                        Row(
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            Expanded(
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(8),
+                                  color: Colors.white,
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.grey.withOpacity(0.5),
+                                      spreadRadius: 2,
+                                      blurRadius: 5,
+                                      offset: Offset(0, 3),
+                                    ),
+                                  ],
                                 ),
-                              ],
+                                child: Row(
+                                  children: [
+                                    SizedBox(width: 16),
+                                    Icon(Icons.tag, color: Color(0xff7687db)),
+                                    SizedBox(width: 16),
+                                    Expanded(
+                                      child: TextField(
+                                        controller: tagController,
+                                        onChanged: (value) {
+                                          setState(() {
+                                            tag = value;
+                                          });
+                                        },
+                                        decoration: InputDecoration(
+                                          hintText: 'Enter tag',
+                                          border: InputBorder.none,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
                             ),
-                            child: Row(
-                              children: [
-                                SizedBox(width: 16),
-                                Icon(Icons.tag, color: Color(0xffEB455F)),
-                                SizedBox(width: 16),
-                                Expanded(
-                                  child: TextField(
-                                    controller: tagController,
-                                    onChanged: (value) {
-                                      setState(() {
-                                        tag = value;
-                                      });
-                                    },
-                                    decoration: InputDecoration(
-                                      hintText: 'Enter tag',
-                                      border: InputBorder.none,
+                            SizedBox(height: 16),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 7,bottom:2),
+                              child: DropdownButtonHideUnderline(
+                                child: DropdownButton2(
+                                  hint: Text(
+                                    'Select Tags',
+                                    style: TextStyle(
+                                      fontSize: 11,
+                                      fontWeight: FontWeight.bold,
+                                      color: Theme.of(context).hintColor,
                                     ),
                                   ),
+                                  items: items
+                                      .map((value) => DropdownMenuItem<String>(
+                                            value: value,
+                                            child: Text(
+                                              value,
+                                              style: const TextStyle(
+                                                fontSize: 14,
+                                              ),
+                                            ),
+                                          ))
+                                      .toList(),
+                                  value: selectedValue,
+
+                                  // controller: tagController,
+                                  onChanged: (value) {
+                                    setState(() {
+                                      selectedValue = value!;
+                                      tags.add(selectedValue!); // Add the selected tag to the tags array
+                                      selectedValue = null; // Reset the selectedValue
+                                    });
+                                  },
+
+                                  buttonStyleData: const ButtonStyleData(
+                                    height: 40,
+                                    width: 120,
+                                  ),
+                                  menuItemStyleData: const MenuItemStyleData(
+                                    height: 40,
+                                  ),
                                 ),
-                              ],
+                              ),
                             ),
-                          ),
+                          ],
                         ),
-                        SizedBox(height: 16),
+                        SizedBox(
+                          height: 10,
+                        ),
                         ElevatedButton.icon(
                           onPressed: _addTag,
                           icon: Icon(Icons.add, color: Colors.white),
@@ -259,7 +262,7 @@ class _AddSuggestionDescState extends State<AddSuggestionDesc> {
                               style: TextStyle(color: Colors.white)),
                           style: ButtonStyle(
                             backgroundColor: MaterialStateProperty.all<Color>(
-                                Color(0xffEB455F)),
+                                Color(0xff7687db)),
                             shape: MaterialStateProperty.all<
                                 RoundedRectangleBorder>(
                               RoundedRectangleBorder(
@@ -270,15 +273,14 @@ class _AddSuggestionDescState extends State<AddSuggestionDesc> {
                         ),
                       ],
                     ),
-
-                    SizedBox(height: 40),
+                    SizedBox(height: 30),
                     Center(
                       child: SizedBox(
                         width: double.infinity,
                         child: ElevatedButton(
                           style: ButtonStyle(
                             backgroundColor: MaterialStateProperty.all<Color>(
-                                Color(0xffEB455F)),
+                                Color(0xff7687db)),
                           ),
                           onPressed: () async {
                             if (_formFieldKey.currentState!.validate()) {

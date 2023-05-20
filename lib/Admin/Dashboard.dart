@@ -45,7 +45,7 @@ class _DashboardState extends State<Dashboard> {
           "Admin Dashboard",
           style: TextStyle(color: Colors.black),
         ),
-        backgroundColor: Color(0xffF7C8E0),
+        backgroundColor: Color(0xff05BFDB),
       ),
       body: SingleChildScrollView(
         child: StreamBuilder(

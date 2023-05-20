@@ -52,8 +52,7 @@ class _SignUpState extends State<SignUp> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Lottie.network(
-                    "https://assets1.lottiefiles.com/packages/lf20_mygDmv6L3F.json"),
+                Lottie.asset('assets/lottie/signupnew2.json'),
                 SizedBox(
                   height: 10.0,
                 ),

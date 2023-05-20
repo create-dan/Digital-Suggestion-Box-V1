@@ -46,6 +46,8 @@ dependencies:
   intl:
   flutter_launcher_icons: ^0.12.0
   vertical_card_pager: ^1.5.0
+  dropdown_button2: ^2.1.0
+  rxdart: ^0.27.7
 
 
 

@@ -9,7 +9,6 @@ import 'package:dss/screens/HomeScreen.dart';
 import 'package:dss/screens/Just.dart';
 
 import 'package:dss/services/get_user_data.dart';
-import 'package:dss/sumit.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 
@@ -32,6 +31,7 @@ class Main extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: user == null ? LoginScreen() : GetUserData(),
       // home: ForgotPasswordScreen(),
+      // home: admin,
       // home: Sumit(),
     );
   }

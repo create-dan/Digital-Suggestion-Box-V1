@@ -22,6 +22,7 @@ class _AddSuggestionImageState extends State<AddSuggestionImage> {
   final TextEditingController _descriptionController = TextEditingController();
   File? _image;
   bool _isUploading = false;
+  Color color=Color(0xff7687db);
   final ImagePicker _picker = ImagePicker();
 
   Future _getImage(ImageSource source) async {
@@ -84,6 +85,7 @@ class _AddSuggestionImageState extends State<AddSuggestionImage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color(0xff05BFDB),
         title: Text('Suggestion Box'),
       ),
       body: SingleChildScrollView(
@@ -146,7 +148,7 @@ class _AddSuggestionImageState extends State<AddSuggestionImage> {
                         // print('after mounted');
 
                         // if (mounted) return;
-
+                        // ButtonStyle(backgroundColor: Colors.red),
                         Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
@@ -173,7 +175,13 @@ class _AddSuggestionImageState extends State<AddSuggestionImage> {
                             ),
                           ),
                         );
+
                       },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: color,
+                ),
+                      
+                    
                       child: Text('Submit'),
                     ),
             ),

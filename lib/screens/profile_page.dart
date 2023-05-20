@@ -29,7 +29,7 @@ class _ProfilePageState extends State<ProfilePage> {
       child: Scaffold(
         appBar: AppBar(
           title: Text("Profile"),
-          backgroundColor: Color(0xffff13005A),
+          backgroundColor: Color(0xff05BFDB),
           leading: Icon(Icons.manage_accounts_outlined),
         ),
         body: Container(

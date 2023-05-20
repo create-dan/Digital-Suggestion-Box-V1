@@ -44,7 +44,7 @@ class _SingleSuggestionState extends State<SingleSuggestion> {
         child: Card(
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
-            side: BorderSide(color: Color(0xffF7C8E0), width: 3),
+            side: BorderSide(color: Color(0xff05BFDB), width: 3),
           ),
           color: Color(0xffF9F9F9),
           child: Column(
@@ -153,7 +153,7 @@ class _SingleSuggestionState extends State<SingleSuggestion> {
                       children: (widget.suggestion.tags)
                           .map((tag) => Chip(
                                 label: Text(tag),
-                                backgroundColor: Color(0xffF2D2E4),
+                                backgroundColor: Color(0xff05BFDB),
                               ))
                           .toList(),
                     ),
