@@ -1,4 +1,6 @@
 # Digital Suggestion Box
+# Video Link
+https://youtu.be/xYbGsVPS-DM
 
 Flutter Project Created for College Canteen, where students can post some suggestions regarding the canteen. Admin can take actions on those suggestions and either approved or discard the suggestion. 
 
