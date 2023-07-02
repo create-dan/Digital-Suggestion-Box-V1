@@ -6,17 +6,15 @@ Flutter Project Created for College Canteen, where students can post some sugges
 
 
 
-Phase1 Complete --> Date: 20 MARCH 2023
-
 
 # INSTALLATION GUIDE
 
- 1) Clone this repo
- 2) Setup environment for flutter development
+ 1)  Clone this repo
+ 2)  Setup environment for flutter development
  3)  Install Android Studio 
  4)  Configure all packages mentioned in pubspec.yaml
  5)   Create a firebase new project and download google service json file and add your file in local cloned project
-6)  Now you are ready to run the app
+ 6)  Now you are ready to run the app
 
 # Track Your Suggestions 
 
@@ -37,6 +35,7 @@ and ensuring adequate response from the organisation.
 - Admin can track total users of app , total active or pending suggestions.
 - Admin can either accept and implement suggestion or discard it.
 - Admin will post the reason for accepting or not accepting the suggestion.
+- Admin can search suggestions by tags.
 
 
 ## Tech Stack
@@ -53,7 +52,7 @@ and ensuring adequate response from the organisation.
 This application is used by students who visit the college canteen.
 
 ## Download Link
-https://drive.google.com/file/d/1V42S4E2OmdyKNsNIhLP1krfQZA6VHYSY/view?usp=sharing
+https://drive.google.com/file/d/1B-6IrqEVLS-jAm0F1h3i2oChQVrTKLO3/view?usp=drive_link
 
 
 ## Admin Section
@@ -66,19 +65,17 @@ Login - Register Page  | Email-Authentication Page
 
 
 
-
-
 ## Home Page / All Suggestions
 
 <p align="center">
-<img src="ScreenShots/allsuggestions.jpeg" height="440">
+<img src="ScreenShots/allsuggestionsnew.jpg" height="440">
 
 </p>
 
 ## Create Suggestion
 Only students not admin
 <p align="center">
-<img src="ScreenShots/createsuggestion.jpeg" height="440">
+<img src="ScreenShots/createsuggestionnew.jpg" height="440">
 
 </p>
 
@@ -93,7 +90,7 @@ For Admin and Student
 ## Profile Screens
 For Admin and Student
 <p align="center">
-<img src="ScreenShots/profile.jpeg" height="440">
+<img src="ScreenShots/profilenew.jpg" height="440">
 
 </p>
 
@@ -108,9 +105,9 @@ For Admin and Student
 ## Admin Section
 
 <p align="center">
-<img src="ScreenShots/admin1.jpeg" height="440">
+<img src="ScreenShots/adminDash.jpg" height="440">
 <img src="ScreenShots/admin2.jpeg" height="440">
-<img src="ScreenShots/admin3.jpeg" height="440">
+<img src="ScreenShots/allsugges.jpg" height="440">
 </p>
 
 

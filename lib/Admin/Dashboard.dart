@@ -74,11 +74,6 @@ class _DashboardState extends State<Dashboard> {
                   SizedBox(
                     height: 10,
                   ),
-                  // SizedBox(
-                  //   height: 150,
-                  //   child: Lottie.network(
-                  //       'https://assets3.lottiefiles.com/packages/lf20_4kxDIRVtSo.json'),
-                  // ),
                   SizedBox(height: 20),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
